@@ -1,0 +1,25 @@
+<input type="text" class="form-control" ng-model="mainVm.searchText" placeholder="search here..">
+    
+<table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Rated</th>
+            <th>Genre</th>
+            <th>IMDB Rating</th>
+            <th>Language</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="movie in mainVm.users | filter:mainVm.searchText">
+            <td><a href="#/movie-detail.tmpl.html/{{movie.title}}">{{movie.title}}</a></td>
+            <td>{{movie.rated}}</td>
+            <td>{{movie.genre}}</td>
+            <td>{{movie.imdbRating}}</td>
+            <td>{{movie.language}}</td>
+            <td><i ng-click="mainVm.deleteUser(user.id)" class="glyphicon glyphicon-remove"></td>
+            
+          </tr>
+        </tbody>
+</table>
+    

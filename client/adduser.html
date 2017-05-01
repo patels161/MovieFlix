@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="plunker">
+
+  <head>
+    <link data-require="bootstrap@*" data-semver="4.0.5" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body ng-controller="MainController as mainVm">
+    <div class="container">
+    <script data-require="angularjs@1.6.2" data-semver="1.6.2" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
+    <script data-require="bootstrap@*" data-semver="4.0.5" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script src="main.controller.js"></script>
+    <form ng-submit="mainVm.addUser()">
+    <h1>Users Table</h1>
+    <label>First Name:</label>
+    <br />
+    <input type="text" id="fname" placeholder="Enter frist name" ng-model="newUser.firstName" />
+    <br />
+    <label>Last Name:</label>
+    <br />
+    <input type="text" id="lname" placeholder="Enter last name" ng-model="newUser.lastName" />
+    <br />
+    <label>Email:</label>
+    <br />
+    <input type="email" id="email" placeholder="Enter email" ng-model="newUser.email"/>
+    <br />
+    <label>City:</label>
+    <br />
+    <input type="text" id="city" placeholder="Enter Adress" ng-model="newUser.address.city" />
+    <br />
+    <br />
+    <button type="submit">Submit</button>
+    </form>
+    </div>
+    
+  </body>
+
+</html>
